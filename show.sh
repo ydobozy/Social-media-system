@@ -3,7 +3,7 @@
 user="$1"
 
 ##check arguments
-if [ ! "$#" -eq 1 ]; then
+if [ ! $# -eq 1 ]; then
         echo "Error: parameters problem" >&2
         exit 1
 
