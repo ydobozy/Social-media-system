@@ -27,7 +27,7 @@ elif ! find . | grep -q "$sender" "$receiver"/friends ; then
 fi
 
 ##everything went well 
-echo '"$sender": "$message"' > "$receiver"/wall
+echo "'$sender': '$message'" > "$receiver"/wall
 echo "Ok: Message posted to wall"
 exit 0
 
