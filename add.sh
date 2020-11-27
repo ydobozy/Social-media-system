@@ -1,10 +1,10 @@
 #!/bin/bash
 
-user=$1
-friend=$2
+user="$1"
+friend="$2"
 
 ##check nbr arguments
-if [ ! $# -eq 2 ]; then
+if [ ! "$#" -eq 2 ]; then
         echo "Error: parameters problem" >&2
         exit 1
 
@@ -19,7 +19,7 @@ elif [ ! -d  "$friend" ]; then
         exit 1
 
 ##check if $user is already friends with $friend 
-elif find . | grep -q "$friend" "$user/friends"; then
+elif find . | grep -q "$friend" "$user"/friends; then
         echo "Error: user already friends with this user" >&2
         exit 1
 fi
