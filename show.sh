@@ -14,14 +14,16 @@ elif [ ! -d "$user" ]; then
 
 fi
 
+## critical section display wall  semaphores used
+./P.sh "$user"/wall
 echo "wallStart"
 
-while read -r line
-do
-  echo "$line"
-done <"$user"/wall
+#while read -r line
+#do
+#echo "$line"
+cat "$user"/wall
 
 echo "wallEnd"
-
+./V.sh "$user"/wall
 ## Everything went well
 exit 0
